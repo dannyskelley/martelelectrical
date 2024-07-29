@@ -1,172 +1,411 @@
 <!-- ============================================ -->
-<!--                   Reviews                    -->
+<!--                  Services                    -->
 <!-- ============================================ -->
 
-<span id="reviews"></span>
-
 <style>
-    /*-- -------------------------- -->
-<---          Reviews           -->
+  /*-- -------------------------- -->
+<---          Services          -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #reviews-1670 {
-    padding: var(--sectionPadding);
-  }
-  #reviews-1670 .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 40px - 64px */
-    gap: clamp(2.5rem, 4.5vw, 4rem);
-  }
-  #reviews-1670 .cs-content {
-    text-align: left;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #reviews-1670 .cs-title {
-    margin: 0rem;
-  }
-  #reviews-1670 .cs-card-group {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* 16px - 20px */
-    gap: clamp(1rem, 2.5vw, 1.25rem);
-  }
-  #reviews-1670 .cs-item {
-    list-style: none;
-    width: 100%;
-    /* 20px - 40px top & bottom */
-    /* 20px - 40px left & right */
-    padding: clamp(1.25rem, 3.15vw, 2.5rem) clamp(1.25rem, 3.15vw, 2.5rem);
-    background-color: #f7f7f7;
-    /* prevents padding from adding to height and width */
-    box-sizing: border-box;
-    display: flex;
-    grid-column: span 12;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    position: relative;
-    /* 24px - 48px */
-    gap: clamp(1.5rem, 4vw, 3rem);
-  }
-  #reviews-1670 .cs-flex-group {
-    /* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
-    margin-top: auto;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-  #reviews-1670 .cs-profile {
-    width: 3.25rem;
-    height: auto;
-    border-radius: 50%;
-    position: relative;
-    display: block;
-  }
-  #reviews-1670 .cs-profile img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    /* makes the image behave like a background image */
-    object-fit: cover;
-  }
-  #reviews-1670 .cs-name {
-    /* 20px - 25px */
-    font-size: 1.25rem;
-    line-height: 1.2em;
-    font-weight: 700;
-    margin: 0;
-    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
-    margin-top: auto;
-    color: var(--headerColor);
-    display: block;
-  }
-  #reviews-1670 .cs-job {
-    /* 14px - 16px */
-    font-size: 1rem;
-    line-height: 1.5em;
-    font-weight: 400;
-    margin: 0;
-    color: var(--bodyTextColor);
-    display: block;
-  }
-  #reviews-1670 .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  #reviews-1670 .cs-item-stars {
-    width: 6.75rem;
-    height: auto;
-  }
-  #reviews-1670 .cs-review {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.6vw, 1.25rem);
-    line-height: 1.5em;
-    margin: 0;
-    color: var(--bodyTextColor);
-    z-index: 1;
-  }
-  #reviews-1670 .cs-quote {
-    width: 5.375rem;
-    height: auto;
-    position: absolute;
-    right: 0rem;
-    bottom: 0rem;
-    z-index: 0;
-  }
+    #services-941 {
+        padding: var(--sectionPadding);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 28px - 72px */
+        gap: clamp(1.75rem, 6vw, 4.5rem);
+        position: relative;
+        z-index: 1;
+    }
+    #services-941 .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #services-941 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: 32.625rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #services-941 .cs-title,
+    #services-941 .cs-text {
+        color: var(--bodyTextColorWhite);
+    }
+    #services-941 .cs-text {
+        margin-bottom: 1rem;
+        opacity: 0.8;
+    }
+    #services-941 .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+   
+    #services-941 .cs-picture-group {
+        width: 100%;
+        max-width: 39.375em;
+        position: relative;
+        overflow: hidden;
+    }
+    #services-941 .cs-picture-group:hover .cs-picture img {
+        transform: scale(1.2);
+    }
+    #services-941 .cs-picture-group:hover .cs-picture:before {
+        opacity: 0.6;
+    }
+    #services-941 .cs-picture {
+        width: 100%;
+        /* 280px - 380px */
+        height: clamp(17.5rem, 43vw, 23.75rem);
+        position: relative;
+        display: block;
+        z-index: 1;
+    }
+    #services-941 .cs-picture:before {
+        /* background color overlay */
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: #1a1a1a;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: opacity 0.3s;
+    }
+    #services-941 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -2;
+        transition: transform 0.8s;
+    }
+    #services-941 .cs-play {
+        /* 80px - 100px */
+        width: clamp(5rem, 6vw, 6.25rem);
+        height: clamp(5rem, 6vw, 6.25rem);
+        border: 2px solid #bababa;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        transition: background-color 0.3s;
+    }
+    #services-941 .cs-play:hover {
+        background-color: var(--primary);
+    }
+    #services-941 .cs-play-icon {
+        /* 20px - 24px */
+        width: clamp(1.25rem, 1.5vw, 1.5rem);
+        height: auto;
+        display: block;
+    }
+    #services-941 .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: 34.375rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+    #services-941 .cs-item {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        margin: 0;
+        /* 24px - 64px top & bottom */
+        /* 24px - 40px left & right */
+        padding: clamp(1.5rem, 6vw, 4rem) clamp(1.5rem, 6vw, 2.5rem);
+        background-color: #f7f3ee;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+    #services-941 .cs-item:hover .cs-h3 {
+        color: var(--bodyTextColorWhite);
+    }
+    #services-941 .cs-item:hover .cs-item-text {
+        color: var(--bodyTextColorWhite);
+        opacity: 0.9;
+    }
+    #services-941 .cs-item:hover .cs-item-background {
+        opacity: 1;
+    }
+    #services-941 .cs-icon {
+        width: 2.5rem;
+        height: auto;
+        margin: 0 0 1.25rem 0;
+    }
+    #services-941 .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        margin: 0 0 0.75rem 0;
+        color: var(--headerColor);
+    }
+    #services-941 .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: 18.75rem;
+        margin: 0 0 2rem 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+    }
+    #services-941 .cs-link {
+        text-decoration: none;
+        font-size: 0.8rem;
+        line-height: 1.2em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        color: var(--primary);
+        position: relative;
+        transition: color 0.3s;
+    }
+    #services-941 .cs-link:hover {
+        color: #fff;
+    }
+    #services-941 .cs-link:before {
+        /* underline */
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: 0rem;
+        left: 0;
+    }
+    #services-941 .cs-item-background {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: opacity 0.3s;
+    }
+    #services-941 .cs-item-background:before {
+        /* background color overlay */
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: #1a1a1a;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    #services-941 .cs-item-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* Makes img tag act as a background image */
+        object-fit: cover;
+    }
+    #services-941 .cs-waves {
+        width: 100%;
+        /* changes to 330px at tablet */
+        height: 40.625rem;
+        background-color: var(--primary);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    #services-941 .cs-waves img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #services-941 .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+    #services-941 .cs-background:before {
+        /* background color overlay */
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: #1a1a1a;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    #services-941 .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* Makes img tag act as a background image */
+        object-fit: cover;
+    }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #reviews-1670 .cs-item {
-    grid-column: span 12;
-  }
+    #services-941 {
+        overflow: visible;
+    }
+    #services-941 .cs-container {
+        max-width: 80rem;
+        justify-content: space-between;
+        align-items: center;
+        /* set flexbox back to the row orientation */
+        flex-direction: row;
+    }
+    #services-941 .cs-content {
+        text-align: left;
+        width: 44.6%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        align-items: flex-start;
+    }
+    #services-941 .cs-picture-group {
+        width: 50%;
+        /* sends it to the right in the 2nd position */
+        order: 2;
+    }
+    #services-941 .cs-card-group {
+        max-width: 80rem;
+    }
+    #services-941 .cs-item {
+        grid-column: span 6;
+    }
+    #services-941 .cs-waves {
+        /* 462px - 612px */
+        height: clamp(28.875rem, 45vw, 38.28rem);
+    }
 }
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-941 .cs-item {
+        grid-column: span 4;
+    }
+}
+
                                 
 </style>
 
-<section id="reviews-1670">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Customer Reviews</span>
-            <h2 class="cs-title">We love helping our customers!</h2>
-        </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
+<section id="services-941">
+  <div class="cs-container">
+      <!-- Left Content Section-->
+      <div class="cs-content">
+          <span class="cs-topper">Our Service</span>
+          <h2 class="cs-title">What We Provide To Our Customer</h2>
+          <p class="cs-text">
+            Sealcoating is the process of applying a protective coating to asphalt-based pavements to provide a layer of protection from the elements: water, oils, and U.V. damage. 
+          </p>
+          <a class="cs-button-solid" aria-label="read more about our services" href="tel:{{client.phoneForTel}}">Call Now for Free Quote</a>
+      </div>
+      <!-- Right Image Section -->
+      <div class="cs-picture-group">
+          <picture class="cs-picture">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/fpFvA7iOMKw?si=d3Ei54b2TvfP0q2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>          </picture>
 
-                <div class="wrapper">
-                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
-                    <p class="cs-review">
-                        “Junky Rabbit responded to me right away on next door with a great price to mow my over grown lawn. Lunden was prompt, courteous and professional. He let me know I didn't need to be home for him to mow and he accepted
-                        Cashapp, Apple Pay, and Venmo. It was really rainy so I was worried he would not be able to mow. Lunden showed up on time and got the job done. Thank you for your hard work to help me keep up with my home”
-                            </p>
-                </div>
-                <div class="cs-flex-group">
+      </div>
+  </div>
+  <ul class="cs-card-group">
+    <li class="cs-item">
+      <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/check-circle.svg" alt="hair cut" width="40" height="40">
+      <h3 class="cs-h3">Driveway Sealing</h3>
+      <p class="cs-item-text">
+         
+      </p>
+      <a href="tel:{{client.phoneForTel}}" class="cs-link">Book Now</a>
+      <!--Background Image-->
+      <picture class="cs-item-background">
+          <img loading="lazy" decoding="async" src="/assets/images/service_drive.jpg" alt="hair cut" width="480" height="425">
+      </picture>
+  </li>
 
-                    <span class="cs-name">
-                       Danny
-                        <span class="cs-job">Highland Park, MI</span>
-                    </span>
-                </div>
-                <!--Quote Icon-->
-                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
-            </li>
-           
-        </ul>
-    </div>
+
+  <li class="cs-item">
+    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/check-circle.svg" alt="hair cut" width="40" height="40">
+    <h3 class="cs-h3">Parking lot Sealing</h3>
+    <p class="cs-item-text">
+       
+    </p>
+    <a href="tel:{{client.phoneForTel}}" class="cs-link">Book Now</a>
+    <!--Background Image-->
+    <picture class="cs-item-background">
+        <img loading="lazy" decoding="async" src="/assets/images/service_parking.jpg" alt="hair cut" width="480" height="425">
+    </picture>
+</li>
+
+
+<li class="cs-item">
+  <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/check-circle.svg" alt="hair cut" width="40" height="40">
+  <h3 class="cs-h3">Crack Filling</h3>
+  <p class="cs-item-text">
+     
+  </p>
+  <a href="tel:{{client.phoneForTel}}" class="cs-link">Book Now</a>
+  <!--Background Image-->
+  <picture class="cs-item-background">
+      <img loading="lazy" decoding="async" src="/assets/images/service_crack.jpg" alt="hair cut" width="480" height="425">
+  </picture>
+</li>
+     
+  </ul>
+
+  <!--Marble Background-->
+  <picture class="cs-background">
+      <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/marble-m.jpg">
+      <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/marble.jpg">
+      <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/marble.jpg" alt="marble" width="1920" height="1101" aria-hidden="true">
+  </picture>
 </section>
-                                
+                              
