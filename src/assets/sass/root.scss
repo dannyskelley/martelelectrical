@@ -12,13 +12,15 @@
     :root {
         --primary: red;
         --primaryLight: green;
-        --secondary: #505B2E;
+        --secondary: #495ACE;
         --secondaryLight: #001f3f;
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
 
-        --nav:green ;
+        --nav:black;
+        --active:#495ACE;
+
 
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -52,7 +54,7 @@
         font-weight: 600;
         color: var(--headerColor);
         text-align: inherit;
-        font-family: "Darumadrop One", Arial, sans-serif;
+        font-family: "Bakbak One", Arial, sans-serif;
         text-transform: uppercase;
         
     }
@@ -192,13 +194,13 @@
 
     @font-face {
         font-style: normal;
-        font-family: "Darumadrop One";
+        font-family: "Bakbak One";
         font-weight: 100;
         font-display: swap;
         src: local(""),
-            url("/assets/fonts/darumadrop-one-v10-latin-regular.woff2") format("woff2"),
+            url("/assets/fonts/bakbak-one-v8-latin-regular.woff2") format("woff2"),
             /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("/assets/fonts/darumadrop-one-v10-latin-regular.woff2")
+                url("/assets/fonts/bakbak-one-v8-latin-regular.woff2")
                 format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 
@@ -929,7 +931,7 @@
                 content: "";
                 opacity: 1;
                 display: block;
-                background: white;
+                background: var(--active);
                 height: 5px;
                 width: 0%;
                 transition: width 0.3s;
@@ -1216,8 +1218,9 @@
                 display: inline-block;
                 margin: auto;
                 margin-bottom: calc(30 / 16 * 1em);
-                height: calc(32 / 16 * 1em);
+                height: calc(32 / 16 * 4em);
                 width: auto;
+                max-width: 100%;
                 text-align: center;
 
                 img {
@@ -1374,7 +1377,7 @@
 
             .logo {
                 margin-left: 0;
-                height: calc(40 / 16 * 1rem);
+                height: calc(40 / 16 * 4rem);
                 text-align: left;
             }
 
