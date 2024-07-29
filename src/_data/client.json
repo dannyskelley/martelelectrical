@@ -1,8 +1,8 @@
 {
-    "name": "Junky Rabbit",
-    "email": "JunkyRabbit@gmail.com",
-    "phoneForTel": "(+248) 818 1130",
-    "phoneFormatted": "(+248) 818 1130",
+    "name": "A & J Sealcoating",
+    "email": "ajsealcoating@gmail.com",
+    "phoneForTel": "(313)-268-0951",
+    "phoneFormatted": "(313)-268-0951",
     "address": {
         "lineOne": "",
         "lineTwo": "",
@@ -13,4 +13,3 @@
     },
     "domain": "https://www.codestitch.app"
 }
-
