@@ -11,7 +11,7 @@
 @media only screen and (min-width: 0rem) {
   #hero-1836 {
     /* 200px - 300px - leaving extra space for the navigation */
-    padding: clamp(12.5rem, 25.95vw, 18.75em) 1rem;
+    padding: clamp(12.5rem, 25.95vw, 15.75em) 1rem;
     /* prevents the topper line from causing an overflow */
     overflow: hidden;
     position: relative;
@@ -27,6 +27,18 @@
     flex-wrap: wrap;
     gap: 3rem;
   }
+
+  #hero-1836 .cs-topper {
+        display: block;
+        margin-bottom: 0.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 3.5rem;
+        line-height: 1.2em;
+        font-weight: 700;
+        color: var(--primary);
+        text-align: inherit;
+    }
   #hero-1836 .cs-content {
     text-align: left;
     width: 100%;
@@ -123,7 +135,7 @@
   #hero-1836 .cs-background {
     background: url("/assets/images/home1.jpg");
     background-size: cover;
-    background-position: center;
+    background-position:center;
     background-repeat: no-repeat;
     /* creates the parallax effect */
     background-attachment: fixed;
@@ -145,8 +157,8 @@
 <section id="hero-1836">
   <div class="cs-container">
       <div class="cs-content">
-          <span class="cs-topper">You tried the rest now try the Best</span>
-          <h1 class="cs-title">A&J Sealcoating</h1>
+          <span class="cs-topper" data-aos="fade-up">You tried the rest now try the Best</span>
+          <h1 class="cs-title" data-aos="fade-down">A&J Sealcoating</h1>
           <p class="cs-text">
             ​Sealcoating is the process of applying a protective coating to asphalt-based pavements to provide a layer of protection from the elements: water, oils, and U.V. damage. 
         </p>
