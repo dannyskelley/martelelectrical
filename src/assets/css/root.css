@@ -16,10 +16,10 @@
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
-    --nav:black;
+    --nav:rgba (0,0,0,.5);
     --active:#495ACE;
     /* 13px - 16px */
-    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    --topperFontSize: clamp(1.5rem, 1.6vw, 1rem);
     /* 31px - 49px */
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
     --bodyFontSize: 1.1rem;
@@ -469,8 +469,6 @@
     height: 100vh;
     width: 0%;
     transition: width 0.5s, opacity 0.3s;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
   }
   #cs-navigation.cs-active .cs-ul-wrapper {
     opacity: 1;
