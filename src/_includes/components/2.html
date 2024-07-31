@@ -1,0 +1,80 @@
+<!-- ============================================ -->
+<!--                   Logos                      -->
+<!-- ============================================ -->
+
+<style>
+    /*-- -------------------------- -->
+<---           Logos            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #logos-857 {
+        padding: var(--sectionPadding);
+       
+    }
+    #logos-857 .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: 50rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #logos-857 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #logos-857 .cs-title {
+        margin: 0;
+    }
+    #logos-857 .cs-logo-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+    #logos-857 .cs-logo {
+        
+        max-width: 7.5rem;
+        height: auto;
+        margin: 0;
+        display: block;
+    }
+}
+/* Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #logos-857 .cs-container {
+        max-width: 80rem;
+    }
+}
+
+                                
+</style>
+
+<section id="logos-857">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Connect with us</span>
+            <h2 class="cs-title">On Social Media</h2>
+        </div>
+        <div class="cs-logo-group">
+            <!--Ideally you want to use svg's for the file path image, which is why these aren't wrapped in picture elements for different screen sizes-->
+            <a target="_blank" class="socialLogo" href="https://www.instagram.com/ajsealcoating"><img class="cs-logo" src="/assets/svgs/instagram.svg" alt="logo" width="150" height="65" loading="lazy" decoding="async"></a>
+            <a target="_blank" class="socialLogo" href="https://www.facebook.com/p/Aj-sealcoating-100063669545096/"><img class="cs-logo" src="/assets/svgs/facebook.svg" alt="logo" width="150" height="65" loading="lazy" decoding="async"></a>
+            <a target="_blank" class="socialLogo" href="https://join.nextdoor.com/pages/a-j-sealcoating-detroit-mi-2/"><img class="cs-logo" src="/assets/svgs/nextdoor.svg" alt="logo" width="250"  loading="lazy" decoding="async"></a>
+    
+        </div>
+    </div>
+</section>
+                                
