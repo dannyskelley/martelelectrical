@@ -110,6 +110,7 @@
     font-size: 100%;
     color: var(--bodyTextColor);
     scroll-behavior: smooth;
+    background-color: #F1F1F4;
   }
   *,
   *:before,
