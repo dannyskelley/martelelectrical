@@ -1,0 +1,275 @@
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<style>
+  /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews-245 {
+        padding: var(--sectionPadding);
+        background: #f1f1f4;
+    }
+    #reviews-245 .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #reviews-245 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 32.625rem;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
+
+    #reviews-245 .cs-card-group {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+    #reviews-245 .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        /* max-width set at tablet */
+        /* pushes up by the same amount the cs-item-img overlaps the card */
+        margin: 3rem 0 0 0;
+        /* 16px - 36px left and right */
+        /* 24px - 36px on the bottom */
+        padding: 3.75rem clamp(1rem, 2.7vw, 2.25rem)
+            clamp(1.25rem, 2.7vw, 2.25rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
+        border-radius: 0.25rem;
+        background: #fff;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #reviews-245 .cs-item-img {
+        width: 4.5rem;
+        height: 4.5rem;
+        position: absolute;
+        top: -3rem;
+    }
+    #reviews-245 .cs-item-text {
+        font-size: 1rem;
+        line-height: 1.5em;
+        margin: 0 0 1.5rem;
+        color: var(--bodyTextColor);
+    }
+    #reviews-245 .cs-flex-group {
+        width: 100%;
+        padding-top: 1.5rem;
+        border-top: 1px solid #dad9e3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+    #reviews-245 .cs-reviewer {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.4vw, 1rem);
+        line-height: 1.5em;
+        font-weight: 700;
+        width: 40%;
+        margin: 0 auto 0 0;
+        display: block;
+        color: var(--headerColor);
+    }
+    #reviews-245 .cs-desc,
+    #reviews-245 .cs-rating {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.4vw, 1rem);
+        font-weight: 400;
+        line-height: 1.5em;
+        color: #7d799c;
+        display: block;
+    }
+    #reviews-245 .cs-rating {
+        margin-right: 0.5rem;
+    }
+    #reviews-245 .cs-item-stars {
+        width: 6em;
+        height: 1em;
+        /* centers it with the rating to the left */
+        margin-bottom: 0.1875rem;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #reviews-245 .cs-container {
+        max-width: 80rem;
+    }
+    #reviews-245 .cs-card-group {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        /* 16px - 20px */
+        column-gap: clamp(1rem, 1.5vw, 1.25rem);
+        row-gap: 4rem;
+    }
+    #reviews-245 .cs-item {
+        /* we do this so it's stackable. You can add new any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of reviews, they don't stay centered.  They align with their grid lines. If you want 4 reviews in a row, lower the width under 22.5vw to get the desired sizes fit 4 in a row and then stack when you add more*/
+        width: clamp(31.5%, 30vw, 32.3%);
+        max-width: 25.8125rem;
+        align-content: space-between;
+    }
+    #reviews-245 .cs-flex-group {
+        /* push contents to the left */
+        justify-content: flex-start;
+    }
+    #reviews-245 .cs-reviewer {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #reviews-245 .cs-flex-group {
+        flex-wrap: nowrap;
+    }
+    #reviews-245 .cs-reviewer {
+        margin: 0;
+    }
+    #reviews-245 .cs-item-stars {
+        margin-bottom: 0.3125rem;
+    }
+}
+
+                                
+</style>
+
+<section id="reviews-245">
+  <div class="cs-container">
+      <div class="cs-content">
+          <span class="cs-topper">Our Reviews</span>
+          <h2 class="cs-title">What Client’s Say About Us</h2>
+          <p class="cs-text">
+            We are a small family owned business that take pride in our work.
+          </p>
+      </div>
+      <ul class="cs-card-group">
+          <!-- Review -->
+          <li class="cs-item">
+            <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/google.svg" alt="profile picture" width="72" height="72">
+            <p class="cs-item-text">
+              I’m a customer that just received my Sealing and Coating today. A and J Coating & sealing is one of the most professional sealing companies that I’ve ever encountered. I have owned 4 homes with blacktop and have used many sealing companies, but never a company that I consider to be My Sealing company for the future ..professional as this company. A & J is a cut above the rest of the companies in Michigan.
+
+            </p>
+            <div class="cs-flex-group">
+                <span class="cs-reviewer">
+                  Chambora Balize
+                    <span class="cs-desc">Homeowner</span>
+                </span>
+                <span class="cs-rating">5.0</span>
+                <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="stars" width="96" height="16">
+            </div>
+        </li>
+        
+
+
+                  <!-- Review -->
+                  <li class="cs-item">
+                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/google.svg" alt="profile picture" width="72" height="72">
+                    <p class="cs-item-text">
+                        I have used all the competitive companies in the past, no one compares to the quality, price and service of A and J!      
+                    </p>
+                    <div class="cs-flex-group">
+                        <span class="cs-reviewer">
+                            Jason Yourofsky
+                            <span class="cs-desc">Homeowner</span>
+                        </span>
+                        <span class="cs-rating">5.0</span>
+                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="stars" width="96" height="16">
+                    </div>
+                </li>
+                
+
+                                  <!-- Review -->
+                                  <li class="cs-item">
+                                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/google.svg" alt="profile picture" width="72" height="72">
+                                    <p class="cs-item-text">
+                                        Al and the rest of the crew did a fantastic job. Highly recommend them. Very professional.  
+                                    </p>
+                                    <div class="cs-flex-group">
+                                        <span class="cs-reviewer">
+                                            Karen Bernardy
+                                            <span class="cs-desc">Homeowner</span>
+                                        </span>
+                                        <span class="cs-rating">5.0</span>
+                                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="stars" width="96" height="16">
+                                    </div>
+                                </li>
+
+
+                                                  <!-- Review -->
+                                                  <li class="cs-item">
+                                                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/google.svg" alt="profile picture" width="72" height="72">
+                                                    <p class="cs-item-text">
+                                                        These guys do Quality work I will hire them again
+                                                    </p>
+                                                    <div class="cs-flex-group">
+                                                        <span class="cs-reviewer">
+                                                            R F
+                                                            <span class="cs-desc">Homeowner</span>
+                                                        </span>
+                                                        <span class="cs-rating">5.0</span>
+                                                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="stars" width="96" height="16">
+                                                    </div>
+                                                </li>
+                                
+
+                                                                               <!-- Review -->
+                                                                               <li class="cs-item">
+                                                                                <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/google.svg" alt="profile picture" width="72" height="72">
+                                                                                <p class="cs-item-text">
+                                                                                    Thank you so much for your professionalism and your quality work on our driveway. I would highly recommend them. Very affordable as well. Thank you!
+
+                                                                                </p>
+                                                                                <div class="cs-flex-group">
+                                                                                    <span class="cs-reviewer">
+                                                                                        KGU
+                                                                                        <span class="cs-desc">Homeowner</span>
+                                                                                    </span>
+                                                                                    <span class="cs-rating">5.0</span>
+                                                                                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="stars" width="96" height="16">
+                                                                                </div>
+                                                                            </li>
+                                                            
+
+                                
+
+
+
+
+      </ul>
+
+
+      <a target="_blank" href="https://www.google.com/localservices/prolist?g2lbs=AOHF13nmaGHlN_NjEje46tNhgHeNchXaeQCppnmLBrJewY2SXXcL-JzAcqCnPx7MZKNIKOHRYdqWNvL1Bvv0YuNfhEAX6EwUYsUKP6tuA3orfSDG1Q0EX90%3D&hl=en-US&gl=us&ssta=1&q=a%20and%20j%20seal%20coating&oq=a%20and%20j%20seal%20coating&slp=MgBSAggCYAB6-wFDaFJoSUdGdVpDQnFJSE5sWVd3Z1kyOWhkR2x1WjBqNDM5U0ZqYkNBZ0FoYUtCQUFFQUVRQWhBREVBUVlBQmdDR0FNWUJDSVVZU0JoYm1RZ2FpQnpaV0ZzSUdOdllYUnBibWVTQVJKaGMzQm9ZV3gwWDJOdmJuUnlZV04wYjNLcUFWY1FBU29ZSWhSaElHRnVaQ0JxSUhObFlXd2dZMjloZEdsdVp5Z0FNaDhRQVNJYkJwc2NUSUVXanFqTHlfWkVEcEl5TTZVSjJLZDBMN0JZZkt3bU1oZ1FBaUlVWVNCaGJtUWdhaUJ6WldGc0lHTnZZWFJwYm1mZ0FRQZIBHgoNL2cvMTFqOTY1cmNscQoNL2cvMTFqMzhjYmNfcw%3D%3D&src=2&spp=Cg0vZy8xMWozOGNiY19zOtABV2lnUUFCQUJFQUlRQXhBRUdBQVlBaGdER0FRaUZHRWdZVzVrSUdvZ2MyVmhiQ0JqYjJGMGFXNW5rZ0VTWVhOd2FHRnNkRjlqYjI1MGNtRmpkRzl5bWdFQXFnRlhFQUVxR0NJVVlTQmhibVFnYWlCelpXRnNJR052WVhScGJtY29BRElmRUFFaUd3YWJIRXlCRm82b3k4djJSQTZTTWpPbENkaW5kQy13V0h5c0pqSVlFQUlpRkdFZ1lXNWtJR29nYzJWaGJDQmpiMkYwYVc1bg%3D%3D&serdesk=1&lrlstt=1722513815302&ved=2ahUKEwibv9Di2NOHAxWDDTQIHVdTHfUQvS56BAgjEAE&scp=ChdnY2lkOmFzcGhhbHRfY29udHJhY3RvchI_EhIJyQUcWerNJIgR913c7LWM_zsiEUhpZ2hsYW5kIFBhcmssIE1JKhQNiOhDGRWImXTOHWp_SBklpfB7zjABGhRhIGFuZCBqIHNlYWwgY29hdGluZyIUYSBhbmQgaiBzZWFsIGNvYXRpbmcqEkFzcGhhbHQgY29udHJhY3Rvcg%3D%3D#ts=3" class="cs-button-solid">View our Google Reviews</a>
+  </div>
+</section>
+                              
