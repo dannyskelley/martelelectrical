@@ -9,184 +9,214 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #hero-1836 {
-    /* 200px - 300px - leaving extra space for the navigation */
-    padding: clamp(12.5rem, 25.95vw, 15.75em) 1rem;
-    /* prevents the topper line from causing an overflow */
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-  }
-  #hero-1836 .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 3rem;
-  }
 
-
-  #hero-1836 .cs-topper {
-
-        font-size: 1.5rem;
-
-    }
-
-  #hero-1836 .cs-content {
-    text-align: left;
-    width: 100%;
-    max-width: 46.875rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    z-index: 1;
-  }
-  #hero-1836 .cs-title {
-    /* 49px - 84px */
-    font-size: clamp(3.0625rem, 6vw, 5.25rem);
-    max-width: 100%;
-    letter-spacing: -2px;
-  }
-  #hero-1836 .cs-title,
-  #hero-1836 .cs-text {
-    text-align: left;
-    color: var(--bodyTextColorWhite);
-  }
-  #hero-1836 .cs-text {
-    margin-bottom: 2rem;
-  }
   
-  #hero-1836 .cs-content-graphic {
-    height: 305%;
-    max-height: 81.25rem;
-    width: auto;
-    position: absolute;
-    opacity: .8;
-    top: 50%;
-    right: -14rem;
-    left: auto;
-    z-index: -1;
-    transform: translateY(-50%);
-    z-index: -3;
-  }
-  #hero-1836 .cs-graphic {
-    width: 100%;
-    min-width: 120rem;
-    height: auto;
-    object-fit: cover;
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    z-index: 2;
-    transform: translateX(-50%);
-  }
-  #hero-1836 .cs-graphic-dark {
-    display: none;
-  }
-  #hero-1836 .cs-background {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    /* Overlay on the background image that gets removed at tablet+, in favour of the svg graphic */
-  }
-  #hero-1836 .cs-background:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #000;
-    /* prevents the cursor from interacting with it */
-    pointer-events: none;
-    opacity: 0.4;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  #hero-1836 .cs-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+
+
+    #hero-1159 {
+        /* 200px - 300px - leaving extra space for the navigation */
+        padding: clamp(12.5rem, 31.95vw, 6.75rem) 2rem 0;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    #hero-1159 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #hero-1159 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 39.375rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: left;
+        padding: 50px 0px;
+    }
+    #hero-1159 .cs-topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+    #hero-1159 .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 51.8125rem;
+        margin: 0 auto 1rem 0;
+        color: #fff;
+        position: relative;
+    }
+    #hero-1159 .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.95vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        /* 464px - 622px */
+        max-width: clamp(29rem, 60vw, 38.785rem);
+        margin: 0 0 2.5rem 0;
+        color: #fff;
+    }
+    
+    #hero-1159 .cs-picture {
+        /* 340px - 742px */
+        height: clamp(3.25rem, 28vw, 12.375rem);
+        width: auto;
+        max-width: 35em;
+        display: flex;
+        align-items: flex-end;
+        justify-content: left;
+        position: absolute;
+        top:110px;
+        left:40px
+       ;
+    }
+    #hero-1159 .cs-picture img {
+        height: 100%;
+        width: auto;
+        border-radius: 999px
+    }
+    #hero-1159 .cs-graphic {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+    }
+    #hero-1159 .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+    #hero-1159 .cs-background:before {
+        /* Overlay */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #1a1a1a;
+        opacity: 0.84;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        /* prevents the cursor from interacting with it */
+        pointer-events: none;
+    }
+    #hero-1159 .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        /* makes the top of the image start at the top of the parent */
+        object-position: top;
+    }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #hero-1836 .cs-background::before {
-    content: none;
-  }
-}
-/* Desktop Parallax - 1300px */
-@media only screen and (min-width: 81.25rem) {
-  #hero-1836 .cs-background {
-    background: url("/assets/images/home1.jpg");
-    background-size: cover;
-    background-position:center;
-    background-repeat: no-repeat;
-    /* creates the parallax effect */
-    background-attachment: fixed;
-  }
-  body.scroll   #hero-1836 .cs-background {
-    background-position:top center;
-    transition: all ease 1s;
-  }
-  #hero-1836 .cs-background img {
-    display: none;
-  }
-}
-/* Large Desktop - 1920px */
-@media only screen and (min-width: 120rem) {
-    #hero-1836 .cs-topper {
-        display: block;
-        margin-bottom: 0.25rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        font-size: 3.5rem;
-        line-height: 1.2em;
-        font-weight: 700;
-        color: var(--primary);
-        text-align: inherit;
+    #hero-1159 {
+        /* 150px - 300px */
+        padding-bottom: clamp(9.375rem, 22vw, 18.75rem);
     }
-  #hero-1836 {
-    /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
-    padding-bottom: 14vw;
-  }
+    #hero-1159 .cs-container {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    #hero-1159 .cs-content {
+        text-align: left;
+        width: 55%;
+        max-width: 39.375rem;
+        align-items: flex-start;
+    }
+    #hero-1159 .cs-picture {
+        justify-content: flex-start;
+        position: absolute;
+        top: 550px;
+        left: 70%;
+    }
 }
+/* Large Desktop - 1600px - Prallax Effect */
+@media only screen and (min-width: 100rem) {
+    #hero-1159 .cs-background {
+        background: url("/assets/images/homebg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    #hero-1159 .cs-background img {
+        display: none;
+    }
+}
+
                                 
 </style>
 
-<section id="hero-1836">
+<section id="hero-1159">
   <div class="cs-container">
       <div class="cs-content">
-          <span class="cs-topper" data-aos="fade-up">You tried the rest now try the Best</span>
-          <h1 class="cs-title" data-aos="fade-down">A&J Sealcoating</h1>
+          <span class="cs-topper">MARTEL ELECTRICAL Services Inc.</span>
+          <h1 class="cs-title">Your Electrical Project done right & on time</h1>
           <p class="cs-text">
-            ​Sealcoating is the process of applying a protective coating to asphalt-based pavements to provide a layer of protection from the elements: water, oils, and U.V. damage. 
-        </p>
-          <a href="tel:{{client.phoneForTel}}" class="cs-button-solid">FREE Estimate</a>
-          <img class="cs-content-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-graphic.svg" alt="graphic" height="1075" width="1135" loading="lazy" decoding="async">
+            MARTEL ELECTRICAL Services Inc. is here to assist you with all your electrical needs. With my experience of over 20 years, you are sure to have your project done right and on time. My customers have been long standing patrons of my business and I value each and every one. No Job too small!
+          </p>
+          <a href="" class="cs-button-solid">Explore Services</a>
       </div>
+      <!-- Person, to make your own crop of a person, visit https://www.remove.bg to do it for you -->
+      <picture class="cs-picture floating">
+          <source media="(max-width: 600px)" srcset="/assets/images/homepic.jpg">
+          <source media="(min-width: 601px)" srcset="/assets/images/homepic.jpg">
+          <img decoding="async" src="/assets/images/homepic.jpg" alt="person" width="698" height="844" aria-hidden="true">
+      </picture>
   </div>
 
-  <!-- Background Image -->
-  <picture class="cs-background">
-      <source media="(max-width: 600px)" srcset="/assets/images/home1.jpg">
-      <source media="(min-width: 601px)" srcset="/assets/images/home1.jpg">
-      <img loading="lazy" decoding="async" src="/assets/images/home1.jpg" alt="field" width="1920" height="1200" aria-hidden="true">
-  </picture>
+  <!--SVG V Graphic-->
+  <img class="cs-graphic" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/v-graphic2.svg" alt="graphic" width="1920" height="163" aria-hidden="true">
 
-  <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
-  <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
-  <img class="cs-graphic cs-graphic-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+  <!-- Background Image, also BG Image is set in CSS at 1600px wide for parallax effect -->
+  <picture class="cs-background">
+      <source media="(max-width: 600px)" srcset="/assets/images/homebg.jpg">
+      <source media="(min-width: 601px)" srcset="/assets/images/homebg.jpg">
+      <img decoding="async" src="/assets/images/homebg.jpg" alt="garage" width="2250" height="1500" aria-hidden="true">
+  </picture>
 </section>
                               

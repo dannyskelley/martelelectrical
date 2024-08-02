@@ -10,16 +10,17 @@
 @media only screen and (min-width: 0em) {
     // Website colors
     :root {
-        --primary: red;
+        --primary: #FA0012;
         --primaryLight: green;
-        --secondary: #495ACE;
+        --secondary: #FA0012;
         --secondaryLight: #001f3f;
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
 
-        --nav:rgba (0,0,0,.5);
-        --active:#495ACE;
+        --nav:#fff;
+        --navLinks:#000;
+        --active:#FA0012;
 
 
         /* 13px - 16px */
@@ -78,7 +79,7 @@
         width: auto;
         padding: 0 calc(30 / 16 * 1rem);
         text-decoration: none;
-    border-radius: 999px;
+    
         font-size: calc(16 / 16 * 1rem);
         line-height: calc(50 / 16 * 1em);
         font-weight: bold;
@@ -87,12 +88,14 @@
         transition: color 0.3s;
         transition-delay: 0.1s;
         text-align: center;
+        clip-path: polygon(0 0,100% 0,calc(100% - 20px) 100%,0 100%);
 
         &:hover {
             color: black;
             &:before {
                 width: 100%;
                 opacity: 1;
+                clip-path: polygon(0 0,100% 0,calc(100% - 20px) 100%,0 100%);
             }
         }
 
@@ -104,11 +107,10 @@
             content: "";
             opacity: 1;
             display: block;
-            background-color: #fff;
+            background-color: #F5F81D;
             height: 100%;
-            border:2px solid black;
             opacity: 0;
-            border-radius: 999px;
+            clip-path: polygon(0 0,100% 0,calc(100% - 20px) 100%,0 100%);
 
             //Transition properties
             width: 0;
@@ -1377,7 +1379,7 @@
 
             .logo {
                 margin-left: 0;
-                height: calc(40 / 16 * 4rem);
+                height: calc(40 / 16 * 1rem);
                 text-align: left;
             }
 
