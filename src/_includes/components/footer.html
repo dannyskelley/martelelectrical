@@ -2,60 +2,345 @@
 <!--                   Footer                     -->
 <!-- ============================================ -->
 
+<style>
+    /*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
 
-<footer id="footer">
-    <div class="container">
-        <div class="left-section">
-            
-                
-            <a  class="logo" href="/"><img style="margin: auto; display: block;" loading="lazy" decoding="async" src="/assets/images/logo.jpg" alt="logo" width="264" height="78"></a>
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cs-footer-1762 {
+    padding: var(--sectionPadding);
+    /* 30px - 50px */
+    padding-bottom: clamp(1.875rem, 5vw, 3.125rem);
+    background-color: white;
+  }
+  #cs-footer-1762 .cs-container {
+    width: 100%;
+    /* reset on tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 32px - 48px */
+    gap: clamp(2rem, 7vw, 3rem);
+  }
+  #cs-footer-1762 .cs-logo-group {
+    /* takes up all the space, lets the other ul's wrap below it */
+    width: 100%;
+    position: relative;
+  }
+  #cs-footer-1762 .cs-logo {
+    width: 13.125rem;
+    height: auto;
+    margin: 0 0 1rem 0;
+    display: block;
+  }
+  #cs-footer-1762 .cs-text {
+    max-width: 44rem;
+    /* 24px - 40px */
+    margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
+    opacity: 0.8;
+  }
+  #cs-footer-1762 .cs-logo-img {
+    width: 100%;
+    height: auto;
+  }
+  #cs-footer-1762 .cs-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #cs-footer-1762 .cs-topper {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  #cs-footer-1762 .cs-contact-link {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-decoration: none;
+    color: var(--headerColor);
+  }
+  #cs-footer-1762 .cs-header {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    /* 16px - 24px */
+    margin: 0 0 clamp(1rem, 4vw, 1.5rem) 0;
+    color: var(--headerColor);
+    display: block;
+    position: relative;
+  }
+  #cs-footer-1762 .cs-ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #cs-footer-1762 .cs-li {
+    list-style: none;
+  }
+  #cs-footer-1762 .cs-link {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: left;
+    text-decoration: none;
+    color: var(--bodyTextColor);
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    transition: color 0.3s;
+  }
+  #cs-footer-1762 .cs-link:hover {
+    color: var(--primaryLight);
+  }
+  #cs-footer-1762 .cs-bottom {
+    width: 100%;
+    max-width: 80rem;
+    /* 60px - 80px */
+    margin: clamp(3.75rem, 7vw, 5rem) auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  #cs-footer-1762 .cs-credit,
+  #cs-footer-1762 .cs-bottom-link,
+  #cs-footer-1762 .cs-credit-link {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-decoration: none;
+    color: var(--bodyTextColor);
+  }
+  #cs-footer-1762 .cs-credit {
+    width: 100%;
+  }
+  #cs-footer-1762 .cs-credit-link {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-decoration: none;
+    width: auto;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+  }
+  #cs-footer-1762 .cs-credit-link:hover {
+    color: var(--primary);
+  }
+  #cs-footer-1762 .cs-bottom-links {
+    width: 100%;
+    display: flex;
+  }
+  #cs-footer-1762 .cs-bottom-link {
+    display: flex;
+    align-items: center;
+  }
+  #cs-footer-1762 .cs-bottom-link:hover {
+    color: var(--primary);
+  }
+  #cs-footer-1762 .cs-bottom-link:last-of-type:before {
+    /* separator */
+    content: "";
+    width: 1px;
+    height: 0.875rem;
+    margin: 0 0.75rem;
+    background: currentColor;
+    opacity: 1;
+    display: block;
+  }
+  #cs-footer-1762 .cs-table {
+    width: 100%;
+    background-color: #f7f7f7;
+    border: 1px solid #dadada;
+    border-top: 4px solid var(--primary);
+  }
+  #cs-footer-1762 .cs-table tr {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    padding: 1rem 1.5rem;
+    color: var(--bodyTextColor);
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    justify-content: space-between;
+    /* last table row shouldn't have border - the outer table's border-bottom is used instead */
+  }
+  #cs-footer-1762 .cs-table tr:last-of-type {
+    border: none;
+  }
+  #cs-footer-1762 .cs-table th,
+  #cs-footer-1762 .cs-table td {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+  }
+  #cs-footer-1762 .cs-table td {
+    text-align: right;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cs-footer-1762 .cs-container {
+    max-width: 80rem;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #cs-footer-1762 .cs-logo-group {
+    grid-column: span 12;
+  }
+  #cs-footer-1762 .cs-ul-wrapper {
+    grid-column: span 3;
+  }
+  #cs-footer-1762 .cs-contact {
+    flex-direction: row;
+  }
+  #cs-footer-1762 .cs-table {
+    grid-column: span 12;
+  }
+  #cs-footer-1762 .cs-bottom {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  #cs-footer-1762 .cs-credit {
+    text-align: left;
+  }
+  #cs-footer-1762 .cs-bottom-links {
+    justify-content: flex-end;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #cs-footer-1762 .cs-logo-group {
+    grid-column: 1 / 6;
+  }
+  #cs-footer-1762 .cs-contact {
+    flex-direction: column;
+  }
+  #cs-footer-1762 .cs-ul-wrapper {
+    justify-self: end;
+  }
+  #cs-footer-1762 .cs-ul-wrapper:first-of-type {
+    grid-column: 8 / 10;
+  }
+  #cs-footer-1762 .cs-ul-wrapper:last-child {
+    grid-column: 11 / 13;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #cs-footer-1762 .cs-logo-group {
+    grid-column: span 4;
+  }
+  #cs-footer-1762 .cs-ul-wrapper {
+    grid-column: span 4;
+    justify-self: start;
+  }
+  #cs-footer-1762 .cs-table {
+    grid-column: span 4;
+  }
+}
+                                
+</style>
 
-            <Div class="cs-topper" style="color:#fff; margin-bottom: 50px;"> You tried the rest now try the Best</Div>
-            <div class="cs-social" style="margin: 20px 0px 50px;">
-<Div class="cs-topper">Message us on:</Div>
-                <a class="cs-social-link" aria-label="visit google profile" href="https://nextdoor.com/pages/a-j-sealcoating-detroit-mi-2/?init_source=search_autocomplete">
-                    <img style="margin-right: 20px;width: 200px; height: 50px; filter: grayscale(1) brightness(1000%);" class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/nextdoor.svg" alt="google">
-                </a>
-
-
-       
+<footer id="cs-footer-1762">
+    <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <a aria-label="go back to home" class="cs-logo" href="">
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/logo.jpg" alt="logo" width="240" height="32">
+            </a>
+            <p class="cs-text">
+                Please reach out with your current challenge, upcoming project or renovation. I will give you a quote over the phone or come to your home and review the details with you in person. 
+            </p>
+            <div class="cs-contact">
+                <div class="cs-contact-info">
+                    <span class="cs-topper">You call, I answer!</span>
+                    <a href="{{client.phoneFormatted}}" class="cs-contact-link">{{client.phoneFormatted}}2</a>
+                </div>
+  
             </div>
+        </div>
+        <!-- Links -->
+        <div class="cs-ul-wrapper">
+            <span class="cs-header">Our Services</span>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a class="cs-link" href="#services">Residential & Commercial Wiring</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="#services">Remodeling / Service Up Grades</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="#services">Trouble Shooting Expert!</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="#services">Service Calls</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="#services">& More!</a>
+                </li>
+     
+            </ul>
         </div>
         
-        <div class="right-section">
-            <div class="lists">
-                
-                <ul>
-                    <li>
-                        <h2>Contact Us</h2>
-                    </li>
-<div class="cs-topper"> Call or Text:</div>
-                    <li style="padding-bottom: 30px;">
-                        <a href="tel:{{client.phoneForTel}}">
-                           
-                            {{client.phoneFormatted}}
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/#top">Navigate to Top of page</a>
-                    </li>
-                </ul>
-
-                
-            </div>
+        <table class="cs-table">
+            <tbody>
+                <tr>
+                    <th scope="row">Monday</th>
+                    <td>8 AM - 5 PM</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tuesday</th>
+                    <td>8 AM - 5 PM</td>
+                </tr>
+                <tr>
+                    <th scope="row">Wednesday</th>
+                    <td>8 AM - 5 PM</td>
+                </tr>
+                <tr>
+                    <th scope="row">Thursday</th>
+                    <td>8 AM - 5 PM</td>
+                </tr>
+                <tr>
+                    <th scope="row">Friday</th>
+                    <td>8 AM - 5 PM</td>
+                </tr>
+                <tr>
+                    <th scope="row">Saturday</th>
+                    <td>Upon Request<BR> (Additional Fees Apply) </td>
+                </tr>
+                <tr>
+                    <th scope="row">Sunday</th>
+                    <td>Upon Request<BR> (Additional Fees Apply)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="cs-bottom">
+        <span class="cs-credit">
+            © Copyright 2024 - <a href="" class="cs-credit-link" target="_blank">MARTEL ELECTRICAL Services Inc.</a>
+        </span>
+        <div class="cs-bottom-links">
+            <a href="#top" class="cs-bottom-link">Scroll to top</a>
         </div>
     </div>
+
+                                
+
     <STYLE>
-        .credit {color:white; text-align: left;}
+        .credit {color:white; text-align: center;}
         .gandalfpill {transition: all ease .2s;margin-left:5px;vertical-align:middle;  display: inline-block; background-color: white; padding:0 8px; border-radius: 999px;}
     .gandalfpill:hover img {filter: grayscale(1) brightness(1000%);transition: all ease .8s;}
-    .gandalfpill:hover {border:1px  solid white; background-color: black;  transform: translateY(-5px); transition: all ease .2s;}
+    .gandalfpill:hover {background-color: black;  transform: translateY(-5px); transition: all ease .2s;}
     .back2top {font-size:2px}
     </STYLE>
     <div class="credit">
-        <span>Website by</span>
+        <span style="color: black; font-size: 12px;">Website by</span>
        
         <a target="_blank" class="gandalfpill" href="https://designgandalf.com/"><img style="vertical-align:middle; " loading="lazy" decoding="async" src="/assets/svgs/gandalflogo.svg" alt="logo" height="12"></a>
     </div>
 </footer>
+                                
