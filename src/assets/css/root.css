@@ -92,7 +92,7 @@
     content: "";
     opacity: 1;
     display: block;
-    background-color: #F5F81D;
+    background-color: #FFC513;
     height: 100%;
     opacity: 0;
     clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
