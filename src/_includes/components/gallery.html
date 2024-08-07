@@ -3,17 +3,14 @@
 <!-- ============================================ -->
 
 <style>
-    /*-- -------------------------- -->
-<---          Gallery           -->
-<--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    body {background-color: black;}
+   
   #gallery-404 {
     background-color: white;
     padding: var(--sectionPadding);
-    margin: 150px 0px;
+    
     overflow: hidden;
     position: relative;
   }
@@ -83,9 +80,7 @@
     flex-wrap: wrap;
     /* 16px - 20px */
     gap: clamp(1rem, 1.5vw, 1.25rem);
-    transition: transform 0.7s, opacity 0.3s, visibility 0.5s, top 0.3s, left 0.3s;
-    /* makes the transform scaling origin the top left corner, dictates the direction by which the scale transforms animate towards */
-    transform-origin: left top;
+
   }
   #gallery-404 .cs-gallery.cs-hidden {
     /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
@@ -101,11 +96,7 @@
     /* prevents the hidden galleries from overflowing the section, and makes a nice animations to transition to and from */
     transform: scaleY(0) scaleX(0);
   }
-  #gallery-404 .cs-gallery.cs-hidden .cs-image {
-    /* when gallery is hidden, add these styles to the cs-image to animate from when cs-hidden is removed from the .cs-gallery */
-    transform: translateY(2.1875rem);
-    opacity: 0;
-  }
+
   #gallery-404 .cs-image {
     border-radius: 1.25rem;
     width: 47%;
@@ -116,28 +107,8 @@
     position: relative;
     /* when .cs-hidden is removed from the .cs-gallery, reset these values and animate between their hidden styles */
     transform: translateY(0rem);
-    opacity: 1;
-    transition: opacity 0.6s, transform 0.6s;
-  }
-  #gallery-404 .cs-image:nth-of-type(1) {
-    /* changes transition delays at desktop */
-    /* these delays stagger the reveal of each image so they all go one after the other and not all at once */
-    transition-delay: 0.15s;
-  }
-  #gallery-404 .cs-image:nth-of-type(2) {
-    transition-delay: 0.3s;
-  }
-  #gallery-404 .cs-image:nth-of-type(3) {
-    transition-delay: 0.45s;
-  }
-  #gallery-404 .cs-image:nth-of-type(4) {
-    transition-delay: 0.6s;
-  }
-  #gallery-404 .cs-image:nth-of-type(5) {
-    transition-delay: 0.75s;
-  }
-  #gallery-404 .cs-image:nth-of-type(6) {
-    transition-delay: 0.9s;
+  
+   
   }
   #gallery-404 .cs-image img {
     position: absolute;
@@ -198,25 +169,6 @@
   #gallery-404 .cs-image:nth-of-type(21) {
     width: 19.0625rem;
   }
-  #gallery-404 .cs-image:nth-of-type(1) {
-    /* these delays stagger the reveal of each image so they all go one after the other and not all at once */
-    transition-delay: 0.15s;
-  }
-  #gallery-404 .cs-image:nth-of-type(2) {
-    transition-delay: 0.3s;
-  }
-  #gallery-404 .cs-image:nth-of-type(3) {
-    transition-delay: 0.45s;
-  }
-  #gallery-404 .cs-image:nth-of-type(4) {
-    transition-delay: 0.15s;
-  }
-  #gallery-404 .cs-image:nth-of-type(5) {
-    transition-delay: 0.3s;
-  }
-  #gallery-404 .cs-image:nth-of-type(6) {
-    transition-delay: 0.45s;
-  }
 }
                                 
 </style>
@@ -228,378 +180,75 @@
                 <span class="cs-topper">Gallery</span>
                 <h2 class="cs-title">Work from Our Previous Clients</h2>
             </div>
-            <div class="cs-button-group">
-                <button class="cs-button" data-filter="one">
-                    All
-                </button>
-                <button class="cs-button" data-filter="two">
-                    Residential Driveway Sealcoating
-                </button>
-                <button class="cs-button" data-filter="three">
-                    Commercial Parking lot Sealcoating
-                </button>
-                <button class="cs-button" data-filter="four">
-                    Crack Filling
-                </button>
-            </div>
+           
         </div>
         <div class="cs-gallery-wrapper">
             <!--Gallery 1-->
         <div class="cs-gallery" data-category="one">
             <!--Picture 1-->
             <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/sealcoating16.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/sealcoating16.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/sealcoating16.jpg" alt="gallery" width="630" height="400">
+                <source media="(max-width: 600px)" srcset="/assets/images/gallery/1.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/gallery/1.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/gallery/1.jpg" alt="gallery" width="630" height="400">
             </picture>
             <!--Picture 2-->
             <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/homesealcoating5.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/homesealcoating5.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/homesealcoating5.jpg" alt="gallery" width="305" height="400">
+                <source media="(max-width: 600px)" srcset="/assets/images/gallery/2.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/gallery/2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/gallery/2.jpg" alt="gallery" width="305" height="400">
             </picture>
             <!--Picture 3-->
             <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/service_parking.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/service_parking.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/service_parking.jpg" alt="gallery" width="305" height="400">
+                <source media="(max-width: 600px)" srcset="/assets/images/gallery/3.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/gallery/3.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/gallery/3.jpg" alt="gallery" width="305" height="400">
             </picture>
             <!--Picture 4-->
             <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/home_sealcoating2.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/home_sealcoating2.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/home_sealcoating2.jpg" alt="gallery" width="305" height="400">
+                <source media="(max-width: 600px)" srcset="/assets/images/gallery/4.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/gallery/4.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/gallery/4.jpg" alt="gallery" width="305" height="400">
             </picture>
             <!--Picture 5-->
             <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/crackfilling3.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/crackfilling3.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/crackfilling3.jpg" alt="gallery" width="305" height="400">
+                <source media="(max-width: 600px)" srcset="/assets/images/gallery/5.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/gallery/5.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/gallery/5.jpg" alt="gallery" width="305" height="400">
             </picture>
 
-            <picture class="cs-image">
-              <source media="(max-width: 600px)" srcset="/assets/images/gallery/commercial5.jpg">
-              <source media="(min-width: 601px)" srcset="/assets/images/gallery/commercial5.jpg">
-              <img loading="lazy" decoding="async" src="/assets/images/gallery/commercial5.jpg" alt="gallery" width="630" height="400">
+            <picture class="cs-image" >
+              <source media="(max-width: 600px)" srcset="/assets/images/gallery/6.jpg">
+              <source media="(min-width: 601px)" srcset="/assets/images/gallery/6.jpg">
+              <img loading="lazy" decoding="async" src="/assets/images/gallery/6.jpg" alt="gallery" width="630" height="400">
           </picture>
 
             <!--Picture 6-->
-            <picture class="cs-image">
-              <source media="(max-width: 600px)" srcset="/assets/images/gallery/homesealcoating8.jpg">
-              <source media="(min-width: 601px)" srcset="/assets/images/gallery/homesealcoating8.jpg">
-              <img loading="lazy" decoding="async" src="/assets/images/gallery/homesealcoating8.jpg" alt="gallery" width="630" height="400">
+            <picture class="cs-image" data-aos="fade-up">
+              <source media="(max-width: 600px)" srcset="/assets/images/gallery/7.jpg">
+              <source media="(min-width: 601px)" srcset="/assets/images/gallery/7.jpg">
+              <img loading="lazy" decoding="async" src="/assets/images/gallery/7.jpg" alt="gallery" width="630" height="400">
           </picture>
             <!--Picture 7-->
-          <picture class="cs-image">
-            <source media="(max-width: 600px)" srcset="/assets/images/gallery/crackfilling6.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/gallery/crackfilling6.jpg">
-            <img loading="lazy" decoding="async" src="/assets/images/gallery/crackfilling6.jpg" alt="gallery" width="305" height="400">
+          <picture class="cs-image" data-aos="fade-up">
+            <source media="(max-width: 600px)" srcset="/assets/images/gallery/12.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/gallery/12.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/gallery/12.jpg" alt="gallery" width="305" height="400">
         </picture>
 
 
-        <picture class="cs-image">
-          <source media="(max-width: 600px)" srcset="/assets/images/gallery/residential97.jpg">
-          <source media="(min-width: 601px)" srcset="/assets/images/gallery/residential97.jpg">
-          <img loading="lazy" decoding="async" src="/assets/images/gallery/residential97.jpg" alt="gallery" width="305" height="400">
+        <picture class="cs-image" data-aos="fade-up">
+          <source media="(max-width: 600px)" srcset="/assets/images/gallery/9.jpg">
+          <source media="(min-width: 601px)" srcset="/assets/images/gallery/9.jpg">
+          <img loading="lazy" decoding="async" src="/assets/images/gallery/9.jpg" alt="gallery" width="305" height="400">
       </picture>
 
 
-          
 
-        <picture class="cs-image">
-          <source media="(max-width: 600px)" srcset="/assets/images/gallery/commercial101.jpg">
-          <source media="(min-width: 601px)" srcset="/assets/images/gallery/commercial101.jpg">
-          <img loading="lazy" decoding="async" src="/assets/images/gallery/commercial101.jpg" alt="gallery" width="305" height="400">
-      </picture>
-          
+    
 
 
-      <picture class="cs-image">
-        <source media="(max-width: 600px)" srcset="/assets/images/gallery/commerciaL102.jpg">
-        <source media="(min-width: 601px)" srcset="/assets/images/gallery/commerciaL102.jpg">
-        <img loading="lazy" decoding="async" src="/assets/images/gallery/commerciaL102.jpg" alt="gallery" width="305" height="400">
-    </picture>
+
+        </div>
         
-
-
-    <picture class="cs-image">
-      <source media="(max-width: 600px)" srcset="/assets/images/gallery/residential80.jpg">
-      <source media="(min-width: 601px)" srcset="/assets/images/gallery/residential80.jpg">
-      <img loading="lazy" decoding="async" src="/assets/images/gallery/residential80.jpg" alt="gallery" width="305" height="400">
-  </picture>
-      
-
-  <picture class="cs-image">
-    <source media="(max-width: 600px)" srcset="/assets/images/gallery/commercial81.jpg">
-    <source media="(min-width: 601px)" srcset="/assets/images/gallery/commercial81.jpg">
-    <img loading="lazy" decoding="async" src="/assets/images/gallery/commercial81.jpg" alt="gallery" width="305" height="400">
-</picture>
-
-<picture class="cs-image">
-  <source media="(max-width: 600px)" srcset="/assets/images/gallery/residential45.jpg">
-  <source media="(min-width: 601px)" srcset="/assets/images/gallery/residential45.jpg">
-  <img loading="lazy" decoding="async" src="/assets/images/gallery/residential45.jpg" alt="gallery" width="305" height="400">
-</picture>
-
-    
-  <picture class="cs-image">
-    <source media="(max-width: 600px)" srcset="/assets/images/gallery/residential78.jpg">
-    <source media="(min-width: 601px)" srcset="/assets/images/gallery/residential78.jpg">
-    <img loading="lazy" decoding="async" src="/assets/images/gallery/residential78.jpg" alt="gallery" width="305" height="400">
-</picture>
-    
-
-<picture class="cs-image">
-  <source media="(max-width: 600px)" srcset="/assets/images/gallery/residential46.jpg">
-  <source media="(min-width: 601px)" srcset="/assets/images/gallery/residential46.jpg">
-  <img loading="lazy" decoding="async" src="/assets/images/gallery/residential46.jpg" alt="gallery" width="305" height="400">
-</picture>
-
-<picture class="cs-image">
-<source media="(max-width: 600px)" srcset="/assets/images/gallery/commercial66.jpg">
-<source media="(min-width: 601px)" srcset="/assets/images/gallery/commercial66.jpg">
-<img loading="lazy" decoding="async" src="/assets/images/gallery/commercial66.jpg" alt="gallery" width="305" height="400">
-</picture>
-
-  
-<picture class="cs-image">
-  <source media="(max-width: 600px)" srcset="/assets/images/gallery/commercial33.jpg">
-  <source media="(min-width: 601px)" srcset="/assets/images/gallery/commercial33.jpg">
-  <img loading="lazy" decoding="async" src="/assets/images/gallery/commercial33.jpg" alt="gallery" width="305" height="400">
-</picture>
-
-
-
-
-
-<picture class="cs-image">
-  <source media="(max-width: 600px)" srcset="/assets/images/gallery/crackfilling19.jpg">
-  <source media="(min-width: 601px)" srcset="/assets/images/gallery/crackfilling19.jpg">
-  <img loading="lazy" decoding="async" src="/assets/images/gallery/crackfilling19.jpg" alt="gallery" width="305" height="400">
-</picture>
-
-
-
-  
-<picture class="cs-image">
-  <source media="(max-width: 600px)" srcset="/assets/images/gallery/residential66.jpg">
-  <source media="(min-width: 601px)" srcset="/assets/images/gallery/residential66.jpg">
-  <img loading="lazy" decoding="async" src="/assets/images/gallery/residential66.jpg" alt="gallery" width="305" height="400">
-</picture>
-  
-<picture class="cs-image">
-  <source media="(max-width: 600px)" srcset="/assets/images/gallery/residential44.jpg">
-  <source media="(min-width: 601px)" srcset="/assets/images/gallery/residential44.jpg">
-  <img loading="lazy" decoding="async" src="/assets/images/gallery/residential44.jpg" alt="gallery" width="305" height="400">
-  </picture>
-
-
-    
-
-
-
-        </div>
-        <!--Gallery 2-->
-        <div class="cs-gallery cs-hidden" data-category="two">
-            <!--Picture 4-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/sealcoating16.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/sealcoating16.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/sealcoating16.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 2-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/homesealcoating5.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/homesealcoating5.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/homesealcoating5.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 3-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/home_sealcoating2.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/home_sealcoating2.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/home_sealcoating2.jpg" alt="gallery" width="630" height="400">
-            </picture>
-            <!--Picture 4-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/homesealcoating8.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/homesealcoating8.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/homesealcoating8.jpg" alt="gallery" width="630" height="400">
-            </picture>
-            <!--Picture 5-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/homesealcoating4.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/homesealcoating4.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/homesealcoating4.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 6-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/homesealcoating13.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/homesealcoating13.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/homesealcoating13.jpg" alt="gallery" width="305" height="400">
-            </picture>
-        </div>
-        <!--Gallery 3-->
-        <div class="cs-gallery cs-hidden" data-category="three">
-            <!--Picture 1-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/service_parking.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/service_parking.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/service_parking.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 2-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/commercial4.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/commercial4.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/commercial4.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 3-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/sealcoating18.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/sealcoating18.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/sealcoating18.jpg" alt="gallery" width="630" height="400">
-            </picture>
-            <!--Picture 4-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/sealcoating14.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/sealcoating14.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/sealcoating14.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 5-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/commercialsealcoating.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/commercialsealcoating.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/commercialsealcoating.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 6-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/pic3.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/pic3.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/pic3.jpg" alt="gallery" width="630" height="400">
-            </picture>
-        </div>
-        <!--Gallery 4-->
-        <div class="cs-gallery cs-hidden" data-category="four">
-            <!--Picture 1-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/commercial.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/commercial.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/commercial.jpg" alt="gallery" width="630" height="400">
-            </picture>
-            <!--Picture 2-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/crackfilling2.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/crackfilling2.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/crackfilling2.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 3-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/service_crackfilling.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/service_crackfilling.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/service_crackfilling.jpg" alt="gallery" width="630" height="400">
-            </picture>
-            <!--Picture 4-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/crackfilling3.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/crackfilling3.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/crackfilling3.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 5-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/crackfilling6.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/crackfilling6.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/crackfilling6.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 6-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/crackfilling5.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/crackfilling5.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/crackfilling5.jpg" alt="gallery" width="305" height="400">
-            </picture>
-        </div>
-        <!--Gallery 5-->
-        <div class="cs-gallery cs-hidden" data-category="five">
-            <!--Picture 1-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/gallery1.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/gallery1.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/gallery1.jpg" alt="gallery" width="630" height="400">
-            </picture>
-            <!--Picture 2-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/gallery4.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/gallery4.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/gallery4.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 3-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/gallery2.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/gallery2.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/gallery2.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 4-->
-            <picture class="cs-image">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/gallery3.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/gallery3.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/gallery3.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 5-->
-            <picture class="cs-image" data-aos="fade-up" data-aos="fade-up" data-aos="fade-up" data-aos="fade-up" data-aos="fade-up" data-aos="fade-up">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/gallery5.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/gallery5.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/gallery5.jpg" alt="gallery" width="305" height="400">
-            </picture>
-            <!--Picture 6-->
-            <picture class="cs-image" data-aos="fade-up" data-aos="fade-up" data-aos="fade-up" data-aos="fade-up" data-aos="fade-up" data-aos="fade-up">
-                <source media="(max-width: 600px)" srcset="/assets/images/gallery/gallery6.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/gallery/gallery6.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/gallery/gallery6.jpg" alt="gallery" width="630" height="400">
-            </picture>
-        </div>
-        </div>
-    </div>
 </section>
-                                
-
-<script>
-    class CS_GalleryFilter {
-	filtersSelector = '.cs-button';
-	galleriesSelector = '.cs-gallery';
-	activeClass = 'cs-active';
-	hiddenClass = 'cs-hidden';
-
-	constructor() {
-		this.$galleries = document.querySelectorAll(this.galleriesSelector);
-		const $filters = document.querySelectorAll(this.filtersSelector);
-
-		this.onClick($filters[0]);
-
-		for (const $filter of $filters) {
-			$filter.addEventListener('click', () => this.onClick($filter));
-		}
-	}
-
-	onClick($filter) {
-		this.filter($filter.dataset.filter);
-
-		const { activeClass } = this;
-
-		this.$activeFilter?.classList.remove(activeClass);
-		$filter.classList.add(activeClass);
-
-		this.$activeFilter = $filter;
-	}
-
-	filter(filter) {
-		const showAll = filter == 'all';
-		const { hiddenClass } = this;
-
-		for (const $gallery of this.$galleries) {
-			const show = showAll || $gallery.dataset.category == filter;
-			$gallery.classList.toggle(hiddenClass, !show);
-		}
-	}
-}
-
-new CS_GalleryFilter();
-                                
-</script>
+   
