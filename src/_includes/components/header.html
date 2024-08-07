@@ -704,7 +704,7 @@ body.scroll #cs-navigation .cs-logo img {
 
     
         <li class="cs-li">
-          <a href="/#reviews" class="cs-li-link {{ 'cs-active' if 'artists' == page.fileSlug }}">
+          <a target="_blank" href="/#reviews" class="cs-li-link {{ 'cs-active' if 'artists' == page.fileSlug }}">
               Customer Reviews
           </a>
       </li>
@@ -756,30 +756,39 @@ body.scroll #cs-navigation .cs-logo img {
 
 
 <script>
-  // add classes for mobile navigation toggling
-  var CSbody = document.querySelector("body");
-  const CSnavbarMenu = document.querySelector("#cs-navigation");
-  const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+// add classes for mobile navigation toggling
+var CSbody = document.querySelector('body');
+const CSnavbarMenu = document.querySelector('#cs-navigation');
+const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+const csLinks = document.querySelectorAll('.cs-li-link');
 
-  CShamburgerMenu.addEventListener('click', function() {
-      CShamburgerMenu.classList.toggle("cs-active");
-      CSnavbarMenu.classList.toggle("cs-active");
-      CSbody.classList.toggle("cs-open");
-      // run the function to check the aria-expanded value
-      ariaExpanded();
-  });
+CShamburgerMenu.addEventListener('click', function () {
+    toggleMobileNav();
+});
 
-  // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not 
-  function ariaExpanded() {
-      const csUL = document.querySelector('#cs-expanded');
-      const csExpanded = csUL.getAttribute('aria-expanded');
+// Add event listener to the entire navigation header to handle clicks on the pseudo-element
+CSnavbarMenu.addEventListener('click', function (event) {
+    if (event.target === CSnavbarMenu && CSnavbarMenu.classList.contains('cs-active')) {
+        toggleMobileNav();
+    }
+});
 
-      if (csExpanded === 'false') {
-          csUL.setAttribute('aria-expanded', 'true');
-      } else {
-          csUL.setAttribute('aria-expanded', 'false');
-      }
-  }
+// Add event listeners to each navigation link
+csLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        if (CSnavbarMenu.classList.contains('cs-active')) {
+            toggleMobileNav();
+        }
+    });
+});
+
+function toggleMobileNav() {
+    CShamburgerMenu.classList.toggle('cs-active');
+    CSnavbarMenu.classList.toggle('cs-active');
+    CSbody.classList.toggle('cs-open');
+    ariaExpanded();
+}
+
 
       // This script adds a class to the body after scrolling 100px
   // and we used these body.scroll styles to create some on scroll 
