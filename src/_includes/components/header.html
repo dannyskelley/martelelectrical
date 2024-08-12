@@ -560,6 +560,7 @@ body.scroll #cs-navigation .cs-logo img {
 }
 #cs-navigation .cs-phone {
   font-size: 1rem;
+  font-weight: 900;
   line-height: 1.5em;
   text-decoration: none;
   margin: 0;
@@ -696,11 +697,19 @@ body.scroll #cs-navigation .cs-logo img {
                     Home
                 </a>
             </li>
+            
             <li class="cs-li">
-              <a href="/#services" class="cs-li-link {{ 'cs-active' if 'artists' == page.fileSlug }}">
+              <a href="/#services" class="cs-li-link {{ 'cs-active' if 'services' == page.fileSlug }}">
                   Services
               </a>
           </li>
+
+             
+          <li class="cs-li">
+            <a href="/#reviews" class="cs-li-link {{ 'cs-active' if 'reviews' == page.fileSlug }}">
+                Customer Reviews
+            </a>
+        </li>
 
           <li class="cs-li">
             <a href="/photos" class="cs-li-link {{ 'cs-active' if 'photos' == page.fileSlug }}">
@@ -708,12 +717,7 @@ body.scroll #cs-navigation .cs-logo img {
             </a>
         </li>
 
-    
-          <li class="cs-li">
-            <a href="/#reviews" class="cs-li-link {{ 'cs-active' if 'artists' == page.fileSlug }}">
-                Customer Reviews
-            </a>
-        </li>
+ 
 
 
         <li class="cs-li">
@@ -770,6 +774,10 @@ body.scroll #cs-navigation .cs-logo img {
 
 
 <script>
+
+
+
+
 // add classes for mobile navigation toggling
 var CSbody = document.querySelector('body');
 const CSnavbarMenu = document.querySelector('#cs-navigation');
@@ -826,4 +834,7 @@ function toggleMobileNav() {
       }
       item.addEventListener('click', onClick)
       }
+
+
+      
 </script>

@@ -13,6 +13,8 @@
     position: relative;
     z-index: 1;
   }
+
+  
   #cta-80:before {
     /* black background on mobile */
     content: "";
@@ -26,7 +28,7 @@
     left: 0;
     z-index: -1;
   }
-  #cta-80 .cs-topper {padding-top: 100px;}
+
   #cta-80 .cs-stripes {
     width: 100%;
     height: 100%;
@@ -88,11 +90,11 @@
     flex-direction: column;
     align-items: center;
     /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
+    
   }
   #cta-80 .cs-content {
     /* set text align to left or center if content needs to be aligned */
-    text-align: center;
+    
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -122,10 +124,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+   
     width: 100%;
     border-radius: 0.5rem 0.5rem 0 0;
-    object-fit: cover;
+    
   }
 }
 /* Tablet - 768px */
@@ -168,17 +170,17 @@
     align-items: flex-start;
   }
   #cta-80 .cs-picture {
-    width: 41vw;
-    max-width: 28.5625rem;
+    width: 17vw;
+    
     /* height is a percentage of parent container height. When the cs-content height changes from extra text, the height of the image adjusts. Since the container is now longer/shorter, 150% of that height with also be longer/shorter */
-    height: clamp(145%, 44vw, 160%);
+    height: clamp(145%, 44vw, 100%);
     /* 500px - 578px */
-    max-height: clamp(31.25rem, 44vw, 36.125rem);
+   
     margin: 0;
     /* position absolute so we can have the cs-content centered inside the black section and have it respond to different heights of the cs-content */
     position: absolute;
     right: 0;
-    bottom: 0;
+   
     /* reset */
     aspect-ratio: none;
   }
@@ -207,10 +209,13 @@
   <div class="cs-container">
       <!-- Left Section -->
       <div class="cs-content">
-          <span class="cs-topper" data-aos="fade-up">Let us help you</span>
-          <h2 class="cs-title">get YOUR DRIVEWAY LOOKING NEW</h2>
+          
+          <h2 class="cs-title" data-aos="fade-up">Please reach out</h2>
+          <span class="cs-topper">with your current challenge, upcoming project or renovation</span>
           <p class="cs-text">
-           Free estimates on sealcoating & crack filling       </p>
+            I will give you a quote over the phone or come to your home and review the details with you in person.    </p>
+
+           
          
            
 <!--                   
@@ -225,10 +230,12 @@
     margin-bottom: 2rem;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    text-align: left;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
+
+
 #button-box-837 .cs-link {
     text-decoration: none;
     padding-right: 1.875rem;
@@ -312,6 +319,8 @@
 </style>
 
 <div id="button-box-837" class="cs-contact-group">
+  <a class="cs-button-solid" aria-label="learn more about our programs" href="tel:{{client.phoneForTel}}">You Call, I Answer!</a>
+
   <a class="cs-link" href="{{client.phoneForTel}}">
       <picture class="cs-wrapper">
           <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone.svg" alt="icon" width="24" height="24">
@@ -321,17 +330,9 @@
           <span class="cs-link-content">{{client.phoneForTel}}</span>
       </div>
   </a>
-  <a class="cs-link" href="mailto:al@ajsealcoatingllc.com.com">
-      <picture class="cs-wrapper">
-          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmail.svg" alt="icon" width="24" height="24">
-      </picture>
-      <div class="cs-info">
-          <span class="cs-header">Send A Message</span>
-          <span class="cs-link-content">al@ajsealcoatingllc.com</span>
-      </div>
-  </a>
 
-  <a style="margin-top:50px;" class="cs-button-solid" aria-label="learn more about our programs" href="tel:{{client.phoneForTel}}">Schedule FREE Estimate</a>
+
+ 
 </div>
                               
 
@@ -340,8 +341,188 @@
       <picture class="cs-picture">
           <source media="(max-width: 600px)" srcset="/assets/images/cta.jpg">
           <source media="(min-width: 601px)" srcset="/assets/images/cta.jpg">
-          <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/cta.jpg" alt="phone in hand" width="457" height="632">
+          <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/cta.jpg" alt="Martel Electrical Port Orange Florida" width="300">
       </picture>
   </div>
+</section>
+                              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============================================ -->
+<!--                    CTA                       -->
+<!-- ============================================ -->
+
+
+<style>
+  /*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+
+  #cta-385 .cs-button-solid {background-color: #193185!important;}
+
+  #cta-385 .cs-topper {color: #193185!important;}
+  #cta-385 {
+    padding: var(--sectionPadding);
+    position: relative;
+    background-color: white;
+  }
+  #cta-385 .cs-background {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-blend-mode: multiply;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #cta-385 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+  #cta-385 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #cta-385 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 57.125rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #cta-385 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #cta-385 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+ 
+  #cta-385 .cs-image-group {
+    /* everything is in ems so we can scale the container down with a font size */
+    font-size: min(2.6vw, .8em);
+    width: 33.9375em;
+    height: 28.75em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #cta-385 .cs-bucket {
+    width: 13.9375em;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+  #cta-385 .cs-bucket img {
+    width: 100%;
+    height: auto;
+  }
+  #cta-385 .cs-powder {
+    width: 30.3125em;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: -1;
+  }
+  #cta-385 .cs-powder img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cta-385 .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #cta-385 .cs-content {
+    text-align: left;
+    align-items: flex-start;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #cta-385 .cs-image-group {
+    font-size: min(1.45vw, 1em);
+  }
+}
+                                
+</style>
+
+<section id="cta-385">
+  <div class="cs-container">
+
+      <div class="cs-content">
+
+        <h2 class="cs-title">Talk to Us About Your Real Estate Needs:</h2>
+          <span class="cs-topper">Campus to Coast Realty</span>
+         
+          <p class="cs-text">
+            Serving Buyers and Sellers throughout Florida
+          </p>
+          <a style="padding-right: 3rem;" href="tel:{{client.phoneForTel}}" class="cs-button-solid">You Call, I Answer!</a>
+
+
+      </div>
+
+      <div class="cs-image-group">
+        <!--Powder Image-->
+        <picture class="cs-powder">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/powder.png">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/powder.png">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/CTA/powder.png" alt="powder" width="485" height="460" aria-hidden="true">
+        </picture>
+        <!--Bucket Image-->
+        <picture class="cs-bucket">
+            <source media="(max-width: 600px)" srcset="/assets/images/logo.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/logo.webp">
+            <img loading="lazy" decoding="async" src="/assets/images/logo.webp" alt="bucket" width="543" height="543" aria-hidden="true">
+        </picture>
+    </div>
+
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+      <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/fabric-m.png">
+      <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/fabric.png">
+      <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/CTA/fabric.png" alt="fabric" width="1920" height="660" aria-hidden="true">
+  </picture>
+</section>
+                              
 </section>
                               
